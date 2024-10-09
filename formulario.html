@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <div id="formulario">
+        <div class="container-sm">
+            <h3>Entre em Contato:</h3>
+                </div>
+        </div>
+    </div>
+
+    <form id="contactForm">
+        <label for="primeiroNome">Nome:</label>
+        <input type="texto" id="primeiroNome" name="primeiroNome" required>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="texto" id="sobrenome" name="sobrenome" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="texto" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(XX) XXXX-XXXX">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="menssagem">Mensagem:</label>
+        <textarea id="menssagem" name="menssagem" rows="4"></textarea>
+
+        <label for="idioma">Idioma aplicado no serviço:</label>
+        <select id="idioma" name="idioma" required>
+            <option value="pt-br">Português</option>
+            <option value="en">Inglês</option>
+            <option value="es">Espanhol</option>
+            <option value="fr">Francês</option>
+        </select>
+
+        <label for="prototipo">Upload de protótipo:</label>
+        <input type="file" id="prototipo" name="prototipo" accept=".pdf, .doc, .docx, .jpeg, .png">
+
+        <label for="preferidaLinguagens">Linguagens preferidas:</label>
+        <select id="preferidaLinguagens" name="preferidaLinguagens" multiple required>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="csharp">C</option>
+        </select>
+
+        <label for="database">Tipo de banco de dados recomendado:</label>
+        <input type="radio" id="sql" name="database" value="SQL" required> SQL
+        <input type="radio" id="nosql" name="database" value="NoSQL" required> NoSQL
+
+        <label for="meetingTime">Turno de preferência para reuniões:</label>
+        <select id="meetingTime" name="meetingTime" required>
+            <option value="morning">Manhã</option>
+            <option value="afternoon">Tarde</option>
+            <option value="evening">Noite</option>
+        </select>
+
+        <label for="meetingHour">Melhor horário para reuniões:</label>
+        <input type="time" id="meetingHour" name="meetingHour" required>
+
+        <label for="deliveryDate">Previsão de entrega desejada:</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
